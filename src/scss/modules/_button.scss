@@ -1,0 +1,29 @@
+.btn {
+  background: transparent;
+  border: 2px solid transparent;
+  outline-color: transparent;
+  text-decoration: none;
+  padding: 1.1rem 5rem;
+  font-weight: $font-medium;
+  border-radius: 4px;
+  transition: $generic-transition;
+
+  &--main {
+    background-color: $color-main;
+    color: $color-bg;
+
+    &:hover {
+      background-color: lighten($color-main, 4%);
+    }
+
+    &--outline {
+      color: $color-main;
+      border: 2px solid $color-main;
+
+      &:hover {
+        background-color: $color-main;
+        color: $color-bg;
+      }
+    }
+  }
+}

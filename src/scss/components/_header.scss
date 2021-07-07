@@ -1,0 +1,35 @@
+.header {
+  padding: 2.4rem 0;
+  & > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    & > img {
+      height: 3.2rem;
+    }
+  }
+
+  &__nav {
+    & > ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin: 0 2.5rem;
+
+        a {
+          font-weight: $font-medium;
+          transition: $generic-transition;
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+  &__call2action {
+  }
+}

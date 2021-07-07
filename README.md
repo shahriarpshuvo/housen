@@ -1,4 +1,6 @@
-<h1 align="center">Housen</h1>
+<h1 align="center">
+<img src="./src/assets/logo.svg" />
+</h1>
 
 ## Setup and Installations
 

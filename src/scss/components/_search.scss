@@ -1,4 +1,5 @@
 .search {
+  min-height: 49vh;
   &__form {
     display: flex;
     align-items: center;
@@ -7,19 +8,35 @@
     box-shadow: 0 2px 2.4rem rgba(0, 0, 0, 0.05);
     padding: 1rem;
     border-radius: 0.4rem;
+    flex-wrap: wrap;
 
     label {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 6rem;
+      cursor: pointer;
     }
 
     input {
-      width: 70%;
-      padding: 0.6rem 2rem;
+      flex-basis: 80%;
+      padding: 1.5rem 2rem;
+
       border: 0;
       border-left: 2px solid $color-light;
+
+      @include media-queries(585px) {
+        flex-basis: 55%;
+        padding: 0.6rem 2rem;
+      }
+
+      @include media-queries(atMedium) {
+        flex-basis: 68%;
+      }
+
+      @include media-queries(2100px) {
+        flex-basis: 72%;
+      }
 
       &:active,
       &:focus {
@@ -28,7 +45,14 @@
     }
 
     button {
-      margin-left: auto;
+      width: 100%;
+      margin-top: 1rem;
+      @include media-queries(585px) {
+        margin-top: 0rem;
+
+        margin-left: auto;
+        width: unset;
+      }
     }
   }
 
@@ -46,11 +70,23 @@
     box-shadow: 0 1px 1rem rgba(138, 92, 92, 0.03);
     border-radius: 0.4rem;
     margin: 2rem 0;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+
+    @include media-queries(585px) {
+      flex-basis: unset;
+      text-align: left;
+    }
 
     &--noResult {
       text-align: center;
       flex-direction: column;
       padding: 6rem 3rem;
+
+      p {
+        margin-top: 1rem;
+      }
     }
 
     svg {
@@ -61,14 +97,52 @@
   &__itemCity {
     font-size: 1.6rem;
     font-weight: $font-medium;
+    flex-basis: 100%;
+
+    @include media-queries(585px) {
+      flex-basis: unset;
+    }
   }
 
   &__itemInfo {
     display: flex;
     align-items: center;
+    margin: 1rem auto;
+
+    @include media-queries(585px) {
+      margin: unset;
+    }
 
     & > * {
       margin-left: 1.5rem;
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:last-of-type {
+        right: 2rem;
+        left: unset;
+
+        @include media-queries(585px) {
+          right: unset;
+        }
+      }
+
+      @include media-queries(585px) {
+        position: relative;
+        left: unset;
+        right: unset;
+        top: unset;
+        transform: translateY(0);
+        width: 1.6rem;
+        height: 1.6rem;
+      }
     }
   }
 }

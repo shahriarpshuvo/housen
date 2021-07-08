@@ -10,7 +10,11 @@
 }
 
 html {
-  font-size: 62.5%; //10px
+  font-size: 56.25%; //9px
+
+  @include media-queries(atMedium) {
+    font-size: 62.5%; //10px
+  }
 }
 
 body {

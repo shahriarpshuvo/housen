@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
+import { ReactComponent as CrossIcon } from '../assets/icons/cross.svg';
 
 import SearchItem from './SearchItem';
 import { getSearchResult, getTopRealEstate } from '../api';
 import { Loading } from './Loading';
-
-const ite = {};
 
 const getId = text => text.replace(' ', '_').toLowerCase();
 
@@ -62,13 +61,11 @@ const Search = () => {
             </div>
           ) : !items.length ? (
             <div className="search__item search__item--noResult">
-              <span className="emoji" role="img">
-                ❌
-              </span>
+              <CrossIcon width="48" height="48" />
               <p>No Results Found, Try something different!</p>
             </div>
           ) : (
-            ite.map(item => <SearchItem key={getId(item.city_name)} item={item} />)
+            items.map(item => <SearchItem key={getId(item.city_name)} item={item} />)
           )}
         </div>
       </div>

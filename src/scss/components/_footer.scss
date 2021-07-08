@@ -7,6 +7,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+
+    @include media-queries(atMedium) {
+      flex-direction: row;
+    }
+  }
+
+  &__copyright {
+    order: 1;
+    margin-top: 2rem;
+    @include media-queries(atMedium) {
+      margin-top: 0;
+      order: unset;
+    }
   }
 
   &__nav {
@@ -15,7 +29,17 @@
 
       li {
         display: inline-block;
-        margin-left: 2.5rem;
+        width: 40%;
+        margin: 1rem;
+        text-align: center;
+
+        @include media-queries(atSmall) {
+          margin: 0;
+          margin-left: 2.5rem;
+          width: initial;
+
+          text-align: left;
+        }
 
         a {
           transition: $generic-transition;

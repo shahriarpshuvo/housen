@@ -1,0 +1,33 @@
+@keyframes loading {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes menu-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+}

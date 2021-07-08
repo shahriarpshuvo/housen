@@ -2,6 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const baseURL = process.env.REACT_APP_API_ENDPOINT_URL;
+// const baseURL = 'blahblah.com/api/nowhere';
 
 if (!baseURL)
   throw new Error(

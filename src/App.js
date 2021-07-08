@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import ErrorFallback from './utils/ErrorFallback';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const BuyHouse = React.lazy(() => import('./pages/BuyHouse'));
@@ -14,7 +15,6 @@ const Signup = React.lazy(() => import('./pages/Signup'));
 const About = React.lazy(() => import('./pages/About'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const ErrorFallback = React.lazy(() => import('./utils/ErrorFallback'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Error404 = React.lazy(() => import('./utils/Error404'));
 

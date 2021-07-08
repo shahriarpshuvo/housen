@@ -3,30 +3,36 @@ import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 
 import SearchItem from './SearchItem';
 import api from '../api';
+import { Loading } from './Loading';
 
 const getId = text => text.replace(' ', '_').toLowerCase();
 
 const Search = () => {
   const [items, setItems] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     api
-      .get()
+      .get('?page=1')
       .then(response => {
         const items = response.data.result.slice(0, 3);
         setItems(items);
+        setLoading(false);
       })
       .catch(() => {});
   }, []);
 
   useEffect(() => {
     if (!searchText) return setItems([]);
+    setLoading(true);
     api
       .get(`/?city_name=${searchText}`)
       .then(response => {
         const items = response.data.result;
         setItems(items);
+        setLoading(false);
       })
       .catch(() => {});
   }, [searchText]);
@@ -52,7 +58,11 @@ const Search = () => {
           <button className="btn btn--main">Search</button>
         </form>
         <div className="search__list">
-          {!items.length ? (
+          {loading ? (
+            <div className="search__item search__item--noResult">
+              <Loading />
+            </div>
+          ) : !items.length ? (
             <div className="search__item search__item--noResult">
               <span class="emoji" role="img">
                 ❌

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 
 import SearchItem from './SearchItem';
-import api from '../api';
+import { getSearchResult, getTopRealEstate } from '../api';
 import { Loading } from './Loading';
 
 const getId = text => text.replace(' ', '_').toLowerCase();
@@ -14,27 +14,23 @@ const Search = () => {
 
   useEffect(() => {
     setLoading(true);
-    api
-      .get('?page=1')
-      .then(response => {
-        const items = response.data.result.slice(0, 3);
+    getTopRealEstate()
+      .then(items => {
         setItems(items);
         setLoading(false);
       })
-      .catch(() => {});
+      .catch(() => setLoading(false));
   }, []);
 
   useEffect(() => {
     if (!searchText) return setItems([]);
     setLoading(true);
-    api
-      .get(`/?city_name=${searchText}`)
-      .then(response => {
-        const items = response.data.result;
+    getSearchResult(searchText)
+      .then(items => {
         setItems(items);
         setLoading(false);
       })
-      .catch(() => {});
+      .catch(() => setLoading(false));
   }, [searchText]);
 
   const handleChange = e => setSearchText(e.target.value);

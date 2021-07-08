@@ -2,11 +2,20 @@ import React from 'react';
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 
 import SearchItem from './SearchItem';
-
-import data from '../mock-data.json';
+import api from '../api';
 
 const Search = () => {
-  const items = data.result.slice(0, 3);
+  const [items, setItems] = React.useState([]);
+
+  React.useEffect(() => {
+    api
+      .get()
+      .then(response => {
+        setItems(response.data.result);
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <section class="search">
       <div className="content-box">
@@ -18,7 +27,7 @@ const Search = () => {
           <button class="btn btn--main">Search</button>
         </form>
         <div className="search__list">
-          {items.map(item => (
+          {items.slice(0, 3).map(item => (
             <SearchItem key={item.city_name.replace(' ', '_').toLowerCase()} item={item} />
           ))}
         </div>

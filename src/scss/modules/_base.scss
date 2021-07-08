@@ -20,3 +20,11 @@ body {
   font-size: 1.6rem;
   background-color: $color-bg;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  justify-content: space-between;
+}

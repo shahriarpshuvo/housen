@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-white;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.02);
+  padding: 3rem 0;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    & > ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-left: 2.5rem;
+
+        a {
+          transition: $generic-transition;
+          &:hover {
+            color: $color-dark-gray;
+          }
+        }
+      }
+    }
+  }
+}

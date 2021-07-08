@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 import { ReactComponent as CrossIcon } from '../assets/icons/cross.svg';
 
 import SearchItem from './SearchItem';
 import { getSearchResult, getTopRealEstate } from '../api';
-import { Loading } from './Loading';
+import Loading from './Loading';
 
 const getId = text => text.replace(' ', '_').toLowerCase();
 

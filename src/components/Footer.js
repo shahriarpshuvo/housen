@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => (
   <footer className="footer meta meta--caption">
@@ -10,16 +11,16 @@ const Footer = () => (
       <nav className="footer__nav">
         <ul>
           <li>
-            <a href="#">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <NavLink to="/faq">FAQ</NavLink>
           </li>
           <li>
-            <a href="#">Terms &amp; Conditions</a>
+            <NavLink to="/terms">Terms &amp; Conditions</NavLink>
           </li>
           <li>
-            <a href="#">Privacy Policy</a>
+            <NavLink to="/privacy">Privacy Policy</NavLink>
           </li>
         </ul>
       </nav>

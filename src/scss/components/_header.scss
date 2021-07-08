@@ -39,6 +39,7 @@
       bottom: unset;
       background: transparent;
       pointer-events: all;
+      animation: none;
     }
 
     & > ul {
@@ -84,6 +85,10 @@
           }
         }
 
+        a.active {
+          color: $color-main;
+        }
+
         &:last-child {
           display: block;
 
@@ -109,14 +114,14 @@
     background-color: $color-white;
     border: none;
     border-radius: 1rem;
-    box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 1.5rem 5px rgba(0, 0, 0, 0.05);
     text-align: center;
     position: fixed;
     z-index: 999;
     top: 1.75rem;
     right: 3.75rem;
     font-size: 0;
-
+    cursor: pointer;
     display: block;
 
     @include media-queries(900px) {

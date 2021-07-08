@@ -1,40 +1,48 @@
-/* eslint-disable */
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+
 import Logo from '../assets/logo.svg';
 
 const Header = () => {
   const [isResponsiveMenu, setIsResponsiveMenu] = useState(false);
-
   const handleClick = () => setIsResponsiveMenu(!isResponsiveMenu);
 
   return (
     <header className="header">
       <div className="container">
         <div className="header__logo">
-          <a href="#">
+          <Link to="/">
             <img src={Logo} alt="Housen" />
-          </a>
+          </Link>
         </div>
         <nav className={`header__nav ${isResponsiveMenu ? 'header__nav--active' : ''}`}>
           <ul>
             <li>
-              <a href="#">Buy a house</a>
+              <NavLink onClick={handleClick} to="/buy">
+                Buy a house
+              </NavLink>
             </li>
             <li>
-              <a href="#">Rent a house</a>
+              <NavLink onClick={handleClick} to="/rent">
+                Rent a house
+              </NavLink>
             </li>
             <li>
-              <a href="#">Mortgage</a>
+              <NavLink onClick={handleClick} to="/mortgage">
+                Mortgage
+              </NavLink>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              <NavLink onClick={handleClick} to="/signup">
+                Sign Up
+              </NavLink>
             </li>
           </ul>
         </nav>
         <div className="header__call2action">
-          <a href="#" className="btn btn--main--outline">
+          <NavLink to="/signup" className="btn btn--main--outline">
             Sign Up
-          </a>
+          </NavLink>
         </div>
         <button
           onClick={handleClick}

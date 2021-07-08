@@ -1,13 +1,14 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Error404 = () => {
+const RentHouse = () => {
   return (
     <div className="page page--error">
       <span role="img" className="emoji">
-        💔
+        🏦
       </span>
-      <h1 className="heading">404 - Not Found</h1>
-      <p class="guiding">Hmm, Looks like you lost!</p>
+      <h1 className="heading">Rent House</h1>
+      <p class="guiding">Oops, you could've told to me implement this!</p>
       <Link to="/" class="btn btn--main">
         🏡 Go Back Home
       </Link>
@@ -15,4 +16,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default RentHouse;

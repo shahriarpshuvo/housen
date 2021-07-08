@@ -1,4 +1,4 @@
-export const Loading = () => (
+const Loading = () => (
   <div className="loading">
     <div className="loading__loader">
       <span></span>
@@ -9,3 +9,5 @@ export const Loading = () => (
     </div>
   </div>
 );
+
+export default Loading;

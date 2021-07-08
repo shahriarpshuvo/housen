@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => (
   <section className="hero">
     <div className="content-box">

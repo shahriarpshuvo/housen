@@ -1,13 +1,14 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Error404 = () => {
+const Signup = () => {
   return (
     <div className="page page--error">
       <span role="img" className="emoji">
-        💔
+        🦄
       </span>
-      <h1 className="heading">404 - Not Found</h1>
-      <p class="guiding">Hmm, Looks like you lost!</p>
+      <h1 className="heading">Signup</h1>
+      <p class="guiding">A nice sign form could be added here, if I were told.</p>
       <Link to="/" class="btn btn--main">
         🏡 Go Back Home
       </Link>
@@ -15,4 +16,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default Signup;

@@ -1,13 +1,9 @@
 .hero {
   margin-top: 8rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   text-align: center;
 
-  & .heading {
+  .heading {
     margin-bottom: 3rem;
-    &--sub {
-      max-width: 70rem;
-      margin: 0 auto;
-    }
   }
 }

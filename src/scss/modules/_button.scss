@@ -4,9 +4,11 @@
   outline-color: transparent;
   text-decoration: none;
   padding: 1.1rem 5rem;
+  font-size: 1.6rem;
   font-weight: $font-medium;
   border-radius: 4px;
   transition: $generic-transition;
+  cursor: pointer;
 
   &--main {
     background-color: $color-main;

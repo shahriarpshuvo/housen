@@ -5,10 +5,12 @@ import SearchItem from './SearchItem';
 import { getSearchResult, getTopRealEstate } from '../api';
 import { Loading } from './Loading';
 
+const ite = {};
+
 const getId = text => text.replace(' ', '_').toLowerCase();
 
 const Search = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState({});
   const [searchText, setSearchText] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -60,13 +62,13 @@ const Search = () => {
             </div>
           ) : !items.length ? (
             <div className="search__item search__item--noResult">
-              <span class="emoji" role="img">
+              <span className="emoji" role="img">
                 ❌
               </span>
               <p>No Results Found, Try something different!</p>
             </div>
           ) : (
-            items.map(item => <SearchItem key={getId(item.city_name)} item={item} />)
+            ite.map(item => <SearchItem key={getId(item.city_name)} item={item} />)
           )}
         </div>
       </div>

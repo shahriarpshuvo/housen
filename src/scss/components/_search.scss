@@ -46,6 +46,12 @@
     border-radius: 0.4rem;
     margin: 2rem 0;
 
+    &--noResult {
+      text-align: center;
+      flex-direction: column;
+      padding: 6rem 3rem;
+    }
+
     svg {
       cursor: pointer;
     }

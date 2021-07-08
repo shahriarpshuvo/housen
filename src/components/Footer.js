@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer class="footer meta meta--caption">
+  <footer className="footer meta meta--caption">
     <div className="container">
       <div className="footer__copyright">
         <p>Housen &copy; {new Date().getFullYear()}</p>

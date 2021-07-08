@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from '../assets/logo.svg';
 
 const Header = () => (
-  <header class="header">
+  <header className="header">
     <div className="container">
       <div className="header__logo">
         <a href="#">
@@ -24,7 +24,7 @@ const Header = () => (
         </ul>
       </nav>
       <div className="header__call2action">
-        <a href="#" class="btn btn--main--outline">
+        <a href="#" className="btn btn--main--outline">
           Sign Up
         </a>
       </div>

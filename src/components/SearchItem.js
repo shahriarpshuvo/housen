@@ -5,7 +5,7 @@ import millify from 'millify';
 import { ReactComponent as FilterIcon } from '../assets/icons/filter.svg';
 import { ReactComponent as ChevronRightIcon } from '../assets/icons/chevron-right.svg';
 
-const SearchItem = ({ item }) => {
+const SearchItem = ({ item, searchMsg }) => {
   const { city_name, short_code, rate, apartment_bed, find_more } = item;
   const convertedRate = millify(rate, { lowercase: true, precision: 2 });
   return (

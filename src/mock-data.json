@@ -1,0 +1,79 @@
+{
+  "error": {
+    "message": null,
+    "code": null
+  },
+  "result": [
+    {
+      "city_name": "Calabasas",
+      "short_code": "CA",
+      "rate": 1500,
+      "apartment_bed": 2,
+      "find_more": 3
+    },
+    {
+      "city_name": "Long Beach",
+      "short_code": "LA",
+      "rate": 2000,
+      "apartment_bed": 1,
+      "find_more": 2
+    },
+    {
+      "city_name": "Fullerton",
+      "short_code": "FN",
+      "rate": 2500,
+      "apartment_bed": 2,
+      "find_more": 3
+    },
+    {
+      "city_name": "Dhaka",
+      "short_code": "DH",
+      "rate": 3500,
+      "apartment_bed": 5,
+      "find_more": 2
+    },
+    {
+      "city_name": "New York",
+      "short_code": "NY",
+      "rate": 5000,
+      "apartment_bed": 2,
+      "find_more": 3
+    },
+    {
+      "city_name": "Chittagong",
+      "short_code": "CT",
+      "rate": 3000,
+      "apartment_bed": 2,
+      "find_more": 3
+    },
+    {
+      "city_name": "Paris",
+      "short_code": "PA",
+      "rate": 5500,
+      "apartment_bed": 3,
+      "find_more": 3
+    },
+    {
+      "city_name": "Berlin",
+      "short_code": "BL",
+      "rate": 4000,
+      "apartment_bed": 1,
+      "find_more": 2
+    },
+    {
+      "city_name": "Kuala Lumpur",
+      "short_code": "KL",
+      "rate": 3500,
+      "apartment_bed": 3,
+      "find_more": 3
+    },
+    {
+      "city_name": "Delhi",
+      "short_code": "DL",
+      "rate": 2500,
+      "apartment_bed": 2,
+      "find_more": 3
+    }
+  ],
+  "status": true
+}

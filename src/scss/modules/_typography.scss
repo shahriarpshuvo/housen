@@ -14,12 +14,15 @@
 
 .meta {
   letter-spacing: -0.02em;
+  color: $color-dark-gray;
   line-height: 1.9rem;
+  font-size: 1.4rem;
 
   &--caption {
+    color: $color-light-gray;
     font-weight: $font-medium;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
   }
 }
 

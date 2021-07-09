@@ -9,7 +9,8 @@ import Loading from './Loading';
 const getId = text => text.replace(' ', '_').toLowerCase();
 
 const Search = () => {
-  const [items, setItems] = useState({});
+  const [items, setItems] = useState([]);
+  const [topItems, setTopItems] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -18,13 +19,14 @@ const Search = () => {
     getTopRealEstate()
       .then(items => {
         setItems(items);
+        setTopItems(items);
         setLoading(false);
       })
       .catch(() => setLoading(false));
   }, []);
 
   useEffect(() => {
-    if (!searchText) return setItems([]);
+    if (!searchText) return setItems(topItems);
     setLoading(true);
     getSearchResult(searchText)
       .then(items => {
@@ -32,7 +34,7 @@ const Search = () => {
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [searchText]);
+  }, [searchText, topItems]);
 
   const handleChange = e => setSearchText(e.target.value);
   const handleSubmit = e => e.preventDefault();

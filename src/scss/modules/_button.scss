@@ -3,12 +3,21 @@
   border: 2px solid transparent;
   outline-color: transparent;
   text-decoration: none;
-  padding: 1.1rem 5rem;
-  font-size: 1.6rem;
+  padding: 1rem 3.2rem;
+  font-size: 1.5rem;
   font-weight: $font-medium;
   border-radius: 4px;
   transition: $generic-transition;
   cursor: pointer;
+
+  @include media-queries(atMedium) {
+    padding: 1rem 4rem;
+  }
+
+  @include media-queries(atMedium) {
+    padding: 1.1rem 5rem;
+    font-size: 1.6rem;
+  }
 
   &--main {
     background-color: $color-main;

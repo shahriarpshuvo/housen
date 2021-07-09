@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Loading from './components/Loading';
 import ErrorFallback from './utils/ErrorFallback';
 
+/** Code Splitting */
 const Home = React.lazy(() => import('./pages/Home'));
 const BuyHouse = React.lazy(() => import('./pages/BuyHouse'));
 const RentHouse = React.lazy(() => import('./pages/RentHouse'));

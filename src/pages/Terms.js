@@ -8,7 +8,7 @@ const Terms = () => {
         📝
       </span>
       <h1 className="heading">Terms &amp; Conditions</h1>
-      <p class="guiding">A long lists of terms and conditions that no one reads but accept anyways.</p>
+      <p class="guiding">A long lists of terms and conditions that no one reads but accepts anyways.</p>
       <Link to="/" class="btn btn--main">
         🏡 Go Back Home
       </Link>

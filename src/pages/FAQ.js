@@ -8,7 +8,7 @@ const FAQ = () => {
         ❓
       </span>
       <h1 className="heading">FAQ</h1>
-      <p class="guiding">Sorry, No question will be answered here!</p>
+      <p class="guiding">Sorry, no question will be answered here!</p>
       <Link to="/" class="btn btn--main">
         🏡 Go Back Home
       </Link>

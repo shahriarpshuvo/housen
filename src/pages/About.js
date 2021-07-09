@@ -7,7 +7,7 @@ const About = () => {
       <span role="img" className="emoji">
         🙌
       </span>
-      <h1 className="heading">About Us</h1>
+      <h1 className="heading">About</h1>
       <p class="guiding">
         A real estate listings website, built with React. This is an assessment for "Frontend Developer" position at
         GoZayaan.

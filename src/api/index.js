@@ -2,7 +2,6 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const baseURL = process.env.REACT_APP_API_ENDPOINT_URL;
-// const baseURL = 'blahblah.com/api/nowhere';
 
 if (!baseURL)
   throw new Error(
@@ -11,6 +10,7 @@ if (!baseURL)
 
 const api = axios.create({ baseURL });
 
+// Handling Response Errors
 api.interceptors.response.use(null, error => {
   const isExpectedError = error.response && error.response.status >= 400 && error.response.status < 500;
   if (!isExpectedError) {

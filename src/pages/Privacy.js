@@ -8,7 +8,7 @@ const Privacy = () => {
         🔐
       </span>
       <h1 className="heading">Privacy</h1>
-      <p class="guiding">Shhhh... It's between GoZayaan and Me.</p>
+      <p class="guiding">Shhhh... 🤫 It's between me and GoZayaan.</p>
       <Link to="/" class="btn btn--main">
         🏡 Go Back Home
       </Link>
